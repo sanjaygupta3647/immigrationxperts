@@ -1,0 +1,170 @@
+.bannerBox{margin-top:75px;display:flex;align-items:center;position:relative;min-height:620px}
+.bannerBox img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.bannerBox .row{display:flex;align-items:flex-end}
+.bannerBox .bannerContent{display:flex;flex-direction:column;gap:15px}
+.bannerBox .bannerContent span{font-size:20px;font-weight:400;color:#fff;display:block;text-decoration:underline;line-height:18px}
+.bannerBox .bannerContent h1{font-size:50px;font-weight:700;color:#fff;line-height:60px}
+.bannerBox .bannerContent .btn{width:max-content;font-weight:500}
+.bannerBox .bannerContent .btn img{width:auto;height:10px;object-fit:fill;position:inherit}
+section{padding:60px 0;display:block;overflow:hidden}
+.aboutSection{padding:60px 0 0}
+.aboutSection .aboutBox{display:flex;gap:30px;align-items:center}
+.aboutSection .aboutBox figure{width:45%}
+.aboutSection .aboutBox .contentBox{width:55%;display:flex;flex-direction:column;gap:15px}
+.aboutSection .aboutBox .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.aboutSection .aboutBox .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.aboutSection .aboutBox .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.aboutSection .aboutBox .contentBox p{font-size:18px;font-weight:300;color:#7C7C7C;line-height:28px}
+.aboutSection .aboutBox .contentBox .btn{width:max-content;font-weight:500}
+.aboutSection .aboutBox .contentBox .immigrationBox{margin-bottom:15px;display:flex;align-items:center}
+.aboutSection .aboutBox .contentBox .immigrationBox .box{width:50%;display:flex;align-items:center;gap:10px;color:#666;font-size:18px;font-weight:300;line-height:24px}
+.aboutSection .aboutBox .contentBox .immigrationBox .box:first-child{color:#00406B;font-weight:600}
+.uspSection{padding:60px 0 0;display:block;background:url(../images/map.svg) no-repeat center right;background-size:250px}
+.uspSection .contentBox{padding-bottom:30px;text-align:center;display:flex;flex-direction:column;gap:15px}
+.uspSection .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.uspSection .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.uspSection .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.uspSection .uspBox{display:flex;gap:20px;align-items:center}
+.uspSection .uspBox .box{padding:15px 20px;background:#fff url(../images/round-box.svg) no-repeat 104% -10px;height:135px;border:#00406B solid 1px;width:100%;overflow:hidden;display:flex;flex-direction:column;position:relative;justify-content:flex-end;cursor:default;gap:5px;transition:.5s}
+.uspSection .uspBox .box p{font-size:14px;font-weight:300;color:#7C7C7C}
+.uspSection .uspBox .box strong{font-size:18px;font-weight:500;color:#00406B;line-height:24px}
+.uspSection .uspBox .box figure{padding:20px;position:absolute;top:0;right:0}
+.uspSection .uspBox .box figure img{height:40px}
+.uspSection .uspBox{display:flex;gap:20px;align-items:center}
+.uspSection .uspBox .box:hover{background:#00406B url(../images/usp-hover-img.svg) no-repeat left top;background-size:auto;transition:.5s}
+.uspSection .uspBox .box:hover p{color:#fff}
+.uspSection .uspBox .box:hover strong{color:#fff}
+.successBox{background:url(../images/city-img.svg) no-repeat left bottom;height:220px}
+.successRate{padding:2px;margin:30px auto 0;background:#00406B;border-radius:100px;width:100%;max-width:700px;display:flex;align-items:center;justify-content:space-between;overflow:hidden}
+.successRate p{padding-left:20px;font-size:14px;color:#fff}
+.successRate .btn{background:#fff;border-radius:100px;color:#00406B}
+.whyChooseUsSection{padding:0;background:#EAEEF5;display:flex;gap:30px;align-items:center}
+.whyChooseUsSection figure{width:450px}
+.whyChooseUsSection figure img{float:left;width:450px}
+.whyChooseUsSection .contentBox{padding:30px 20px 30px 0;display:flex;flex-direction:column;gap:15px;width:calc(100% - 490px)}
+.whyChooseUsSection .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.whyChooseUsSection .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.whyChooseUsSection .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.whyChooseUsSection .contentBox p{font-size:18px;font-weight:300;color:#7C7C7C;line-height:28px}
+.whyChooseUsSection .contentBox ul{display:block}
+.whyChooseUsSection .contentBox ul li{padding-left:15px;display:block;font-size:18px;font-weight:400;color:#00406b;line-height:28px;position:relative}
+.whyChooseUsSection .contentBox ul li:after{content:'';position:absolute;top:10px;left:0;width:5px;height:5px;background:#00406b;border-radius:10px}
+.whyChooseUsSection .contentBox .btn{width: 55%;font-weight:500}
+.benefitsSection{padding:0;display:flex;gap:30px;align-items:center;position:relative}
+.benefitsSection figure{position:absolute;top:0;right:0;height:100%}
+.benefitsSection figure img{float:left;height:100%;object-fit:cover;max-width:min-content}
+.benefitsSection .contentBox{padding:60px 0;display:flex;flex-direction:column;gap:15px;width:calc(100% - 490px)}
+.benefitsSection .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.benefitsSection .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.benefitsSection .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.benefitsSection .contentBox p{font-size:18px;font-weight:300;color:#7C7C7C;line-height:28px}
+.benefitsSection .contentBox .box{display:flex}
+.benefitsSection .contentBox ul{display:block}
+.benefitsSection .contentBox ul li{padding-left:15px;display:block;font-size:18px;font-weight:400;color:#00406b;line-height:28px;position:relative}
+.benefitsSection .contentBox ul li:after{content:'';position:absolute;top:10px;left:0;width:5px;height:5px;background:#00406b;border-radius:10px}
+.consultationSection{display:flex;gap:30px;align-items:center;position:relative;background:#00406B url(../images/city-black.svg) repeat-x left bottom;background-size:105%}
+.consultationSection .row{display:flex;align-items:center}
+.consultationSection figure{position:absolute;top:0;right:0;height:100%}
+.consultationSection figure img{float:left;height:100%;object-fit:cover;max-width:min-content}
+.consultationSection .contentBox{/*padding:60px 0;*/display:flex;flex-direction:column;gap:15px}
+.consultationSection .contentBox span{font-size:18px;font-weight:500;color:#fff;display:block;text-decoration:underline;line-height:18px}
+.consultationSection .contentBox h2{font-size:38px;font-weight:700;color:#BAB9B9;line-height:40px}
+.consultationSection .contentBox h2 span{font-size:38px;color:#fff;display:inline-block;text-decoration:none;font-weight:700}
+.consultationSection .contentBox p{font-size:18px;font-weight:300;color:#BAB9B9;line-height:28px; margin: 15px 0px;}
+.consultationSection .contentBox .box{display:flex}
+.consultationSection .contentBox ul{display:block}
+.consultationSection .contentBox ul li{padding-left:15px;display:block;font-size:18px;font-weight:400;color:#BAB9B9;line-height:28px;position:relative}
+.consultationSection .contentBox ul li:after{content:'';position:absolute;top:10px;left:0;width:5px;height:5px;background:#fff;border-radius:10px}
+.clientLogo{display:flex;flex-wrap:wrap;gap:10px}
+.clientLogo .item{width:calc(33.3% - 7px);background:#fff;border-radius:5px;padding:10px;display:flex;align-items:center;justify-content:center}
+.clientLogo .item img{height:100%;max-height:65px}
+.videoSection{display:flex;gap:30px;align-items:center;position:relative}
+.videoSection .contentBox{padding-bottom:30px;text-align:center;display:flex;flex-direction:column;gap:15px}
+.videoSection .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.videoSection .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.videoSection .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.videoSection .videoBox{padding:0 0 30px;display:flex;gap:20px}
+.videoSection .videoBox .videoItem{width:100%}
+.videoSection .videoBox .videoItem iframe{width:100%;height:300px}
+.videoSection .btnBox{display:block;text-align:center}
+.partnersSection{display:flex;position:relative}
+.partnersSection .contentBox{padding-bottom:30px;text-align:center;display:flex;flex-direction:column;gap:15px}
+.partnersSection .contentBox span{font-size:18px;font-weight:500;color:#00406B;display:block;text-decoration:underline;line-height:18px}
+.partnersSection .contentBox h2{font-size:38px;font-weight:700;color:#7C7C7C;line-height:40px}
+.partnersSection .contentBox h2 span{font-size:38px;color:#00406B;display:inline-block;text-decoration:none;font-weight:700}
+.partnersSection .partnersBox{display:flex;gap:15px}
+.partnersSection .partnersBox .item{padding:15px}
+.partnersSection .partnersBox .item img{width:100%}
+.reviewsSection{display:flex;position:relative;background:#00406B}
+.reviewsSection .contentBox{padding-bottom:30px;display:flex;flex-direction:column;gap:15px}
+.reviewsSection .contentBox span{font-size:18px;font-weight:500;color:#fff;display:block;text-decoration:underline;line-height:18px}
+.reviewsSection .contentBox h2{font-size:38px;font-weight:700;color:#BAB9B9;line-height:40px}
+.reviewsSection .contentBox h2 span{font-size:38px;color:#fff;display:inline-block;text-decoration:none;font-weight:700}
+.reviewsSection .reviewsBox{display:flex;gap:15px}
+.reviewsSection .swiperNav{display:flex;gap:5px;width:auto;position:absolute;top:60px;right:15px}
+.reviewsSection .reviewsBox .reviewItem{padding:20px 20px 100px;background:#7B7B7B;display:flex;flex-direction:column;gap:8px;position:relative}
+.reviewsSection .reviewsBox .reviewItem h3{color:#fff;font-size:22px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.reviewsSection .reviewsBox .reviewItem p{margin-bottom:15px;color:#fff;font-size:16px;line-height:24px}
+.reviewsSection .reviewsBox .reviewItem .details{padding:15px 20px;position:absolute;bottom:0;left:0;width:100%;background:#fff;display:flex;gap:15px;align-items:center}
+.reviewsSection .reviewsBox .reviewItem .details:after{content:'„';position:absolute;top:-30px;right:15px;width:36px;height:60px;display:flex;justify-content:center;font-size:90px;color:#00406b;line-height:0;font-family:initial}
+.reviewsSection .reviewsBox .reviewItem .details figure{width:65px;height:65px;overflow:hidden;border-radius:65px}
+.reviewsSection .reviewsBox .reviewItem .details figure img{width:100%;height:100%;object-fit:cover}
+.reviewsSection .reviewsBox .reviewItem .details .name{color:#00406B;font-size:22px;line-height:24px}
+.reviewsSection .reviewsBox .reviewItem .details .name span{color:#BAB9B9;font-size:16px;display:block;font-weight:300}
+@media only screen and (max-width:1024px) {
+.benefitsSection .contentBox .box{flex-direction:column}
+.bannerBox .bannerContent h1{font-size:40px;font-weight:700;color:#fff;line-height:50px}
+}
+@media only screen and (max-width:768px) {
+.ipadNone{display:none}
+.bannerBox{min-height:450px}
+.bannerBox img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:FlipH}
+.aboutSection .aboutBox{flex-direction:column}
+.aboutSection .aboutBox .contentBox{width:100%}
+.whyChooseUsSection{padding:30px 0;flex-direction:column}
+.whyChooseUsSection figure,.aboutSection .aboutBox figure{display:none}
+.whyChooseUsSection .contentBox{padding:0 15px 30px;width:100%}
+.uspSection .uspBox{flex-wrap:wrap}
+.uspSection .uspBox .box{width:calc(50% - 10px)}
+.uspSection .contentBox,.partnersSection .contentBox,.videoSection .contentBox{align-items:flex-start;text-align:left}
+.benefitsSection .contentBox{width:100%;position:relative;z-index:1}
+.benefitsSection figure{opacity:.07!important}
+.consultationSection .contentBox{padding:0}
+.videoSection .videoBox .videoItem iframe{height:220px}
+}
+@media only screen and (max-width:540px) {
+.bannerBox{margin-top:65px;min-height:350px}
+.bannerBox .bannerContent h1{font-size:25px;line-height:30px}
+.bannerBox .bannerContent span{font-size:16px}
+.bannerBox .bannerContent .btn img{transform:scaleX(1)}
+.aboutSection .aboutBox figure{width:100%}
+.aboutSection .aboutBox .contentBox .immigrationBox{flex-direction:column;align-items:flex-start;gap:10px}
+.aboutSection .aboutBox .contentBox .immigrationBox .box{width:100%}
+.aboutSection .aboutBox .contentBox span,.uspSection .contentBox span,.whyChooseUsSection .contentBox span,.benefitsSection .contentBox span,.consultationSection .contentBox span,.videoSection .contentBox span,.reviewsSection .contentBox span,.partnersSection .contentBox span{margin-bottom:-10px;font-size:16px}
+.aboutSection .aboutBox .contentBox h2,.uspSection .contentBox h2,.whyChooseUsSection .contentBox h2,.benefitsSection .contentBox h2,.consultationSection .contentBox h2,.videoSection .contentBox h2,.reviewsSection .contentBox h2,.partnersSection .contentBox h2{font-size:24px;line-height:26px;font-weight:600}
+.aboutSection .aboutBox .contentBox h2 span,.uspSection .contentBox h2 span,.whyChooseUsSection .contentBox h2 span,.benefitsSection .contentBox h2 span,.consultationSection .contentBox h2 span,.videoSection .contentBox h2 span,.reviewsSection .contentBox h2 span,.partnersSection .contentBox h2 span{font-size:24px}
+.uspSection .uspBox{gap:10px}
+.uspSection .uspBox .box{height:115px;width:100%}
+.uspSection .contentBox{padding-bottom:15px;text-align:initial}
+.successRate{padding:20px;border-radius:0;width:100%;flex-direction:column;text-align:center;gap:15px}
+.successBox{height:370px}
+.whyChooseUsSection figure{display:none}
+.aboutSection .aboutBox .contentBox .immigrationBox .box,.aboutSection .aboutBox .contentBox p,.whyChooseUsSection .contentBox p,.benefitsSection .contentBox p,.consultationSection .contentBox p{font-size:16px;line-height:24px}
+.whyChooseUsSection .contentBox ul li,.benefitsSection .contentBox ul li,.consultationSection .contentBox ul li{font-size:16px;line-height:24px;font-weight:300}
+.uspSection .contentBox{gap:15px}
+.videoSection .contentBox{padding-bottom:30px;text-align:initial}
+.videoSection .videoBox{gap:10px;flex-direction:column}
+.reviewsSection .swiperNav{display:none}
+.reviewsSection .reviewsBox .swiper-container{padding:0 15px;margin:0 -15px}
+.reviewsSection .reviewsBox .reviewItem p{font-size:14px;line-height:22px}
+.reviewsSection .reviewsBox .reviewItem .details .name{font-size:16px}
+.reviewsSection .reviewsBox .reviewItem .details .name span{font-size:14px}
+.partnersSection .contentBox{padding-bottom:30px;text-align:inherit}
+.partnersSection .partnersBox{gap:10px;white-space:nowrap;overflow:hidden;overflow-x:auto;margin:0 -15px;padding:0 15px}
+.partnersSection .partnersBox .item{padding:15px;flex:none;width:200px;border:#e5e5e5 solid 1px}
+.aboutSection{padding:15px 0 0}
+.aboutSection .aboutBox figure{display:block}
+.whyChooseUsSection .contentBox ul { margin-bottom: 50px;}
+.whyChooseUsSection .contentBox .btn{margin-left: 15px !important;}
+.aboutSection .aboutBox .contentBox .immigrationBox{margin-bottom:70px;}
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: 
+
+User-agent: *
+Disallow: /backup
+
+#Sitemap
+Sitemap: https://www.immigrationxperts.com/sitemap.xml

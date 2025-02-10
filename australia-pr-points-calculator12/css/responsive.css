@@ -1,0 +1,179 @@
+@media (min-width: 768px){
+#sticky-wrap.stickyhead {
+	position: fixed;
+	top: 0;
+	right:0;
+	left:0;
+	background: #fff;
+	box-shadow: 0 0 10px rgb(236, 223, 223);
+
+}
+}
+
+
+@media only screen and (min-width:220px) and (max-width:767px) {
+	
+	/*====== Comman ====== */
+	.container
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.all_page_inner
+	{
+		padding-top: 10px;
+	}
+	/*=== Top Header ====*/
+	.header_sec
+	{
+		position: relative;
+	}
+	
+	
+	/*===== Navigation ======*/
+	.header_left
+	{
+		width: 100%;
+		justify-content: center;
+	}
+	.header_right
+	{
+		width: 100%;
+		margin-bottom: 3px;
+		margin-top: 3px;
+		    justify-content: center;
+	}
+	
+	.point_heading_main
+	{
+		width: 100%;
+	}
+	
+	.avtar_box_main {
+		width: 100%;
+	}
+	.col_5_box.avtar_box_main
+	{
+		width: 50%;
+	}
+	
+	
+
+}
+@media only screen and (min-width:220px) and (max-width:319px) {
+	/*===== Top Haeder ==*/
+	.header_one_left
+	{
+		width: 100%;
+		text-align: center;
+		float: none;
+		
+	}
+	.header_one_right
+	{
+		width: 100%;
+		
+	}
+	.header_one_right_inner
+	{
+		width: 100%;
+	}
+	
+	.header_one_right .list_top_social
+	{
+		float: left;
+		text-align: center;
+		width: 50%;
+	}
+	.header_one_right .list_top_social li a
+	{
+		padding: 0px 6px;
+	}
+	
+}
+
+
+@media only screen and (min-width:320px) and (max-width:479px) {
+	
+	/*===== Top Haeder ==*/
+	.header_one_left
+	{
+		width: 100%;
+		text-align: center;
+		float: none;
+		
+	}
+	.header_one_right
+	{
+		width: 100%;
+		
+	}
+	
+
+	
+	
+}
+	
+	
+@media only screen and (min-width:480px) and (max-width:767px) {
+	
+	/*===== Top Haeder ==*/
+	.header_one_left
+	{
+		width: 100%;
+		text-align: center;
+		float: none;
+		
+	}
+	.header_one_right
+	{
+		width: 100%;
+		
+	}
+	
+	
+}
+
+
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+	
+	/*====== comman ======*/
+	.all_page_inner
+	{
+		padding-top: 10px;
+	}
+	/*===== Top Haeder ==*/
+	.header_one_left
+	{
+		width: 100%;
+		text-align: center;
+		float: none;
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+/********************@media only screen and (min-width:1024px) and (max-width:1200px)********************/
+
+
+@media (min-width:992px) and (max-width:1199px) {
+	
+	
+	
+}
+
+	
+/********************@media only screen and (min-width:1201px)********************/
+
+	
+
+/********************@media only screen and (min-width:1201px)********************/

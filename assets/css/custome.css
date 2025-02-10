@@ -1,0 +1,49 @@
+.four {
+    background-color: #015fc9;
+    border-radius: 10px;
+}
+
+.get-insuracne-four__tab-btn-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: var(--insur-bdr-radius);
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    padding-right: 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    justify-content: center;
+}
+
+.btn-four {
+    padding-left: 0;
+    padding-right: 0;
+    display: contents;
+}
+
+.get-insuracne-four__tab-text {
+    margin-left: 14px;
+    font-size: 16px;
+    color: white;
+}
+
+.get-insurance__tab-box .tab-buttons .tab-btn.four.active-btn {
+    background-color: #e1ebf7;
+    box-shadow: none;
+}
+
+.btn-four :nth-child(4) {
+    padding-right: 0;
+}
+
+.get-insurance__tab-box .tab-buttons .tab-btn.four.active-btn p {
+    color: #015fc9;
+}
+
+#visa-tab .fixed {
+    position: fixed;
+    z-index: 99;
+}

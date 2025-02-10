@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Australia PR</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta content="easetemplate" name="author" />
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon-16x16.png" />
+    
+    <!-- Libs CSS -->
+    <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+       <style>
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      #spinnerPopup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      #spinnerPopup > div {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        width: 550px;
+      }
+    
+      .wheel-container {
+        margin: 20px 0 20px 65px;
+        position: relative;
+      }
+    
+      #spinnerWheel {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 6px solid #3498db;
+        background: conic-gradient(#f39c12 0% 25%, #e74c3c 25% 50%, #1abc9c 50% 75%, #9b59b6 75% 100%);
+        position: relative;
+      }
+    
+      .wheel-label {
+        font-weight: bold;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        transform-origin: 0 100%;
+      }
+    
+      #spinnerArrow {
+        position: absolute;
+        top: 41px;
+        left: 94%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid red;
+      }
+    
+      #spinMessage {
+        margin-top: 22px;
+        font-weight: 900;
+        color: red;
+        font-size: x-large;
+        animation: blink 1s infinite;
+      }
+    
+      #closeButton {
+        display: none;
+      }
+    
+      /* Responsive Design for Mobile */
+      @media (max-width: 768px) {
+        #spinnerPopup > div {
+          width: 90%; /* Adjust popup width */
+        }
+    
+        #spinnerWheel {
+          width: 340px; /* Reduce spinner size */
+          height: 340px;
+        }
+    
+        .wheel-label {
+          font-size: 14px; /* Adjust label size */
+          transform: rotate(5deg) translate(90px) rotate(-5deg); /* Adjust for smaller size */
+        }
+    
+        .wheel-label:nth-child(1) {
+          transform: rotate(5deg) translate(110px) rotate(-5deg); /* Adjust position */
+        }
+    
+        .wheel-label:nth-child(2) {
+          transform: rotate(90deg) translate(110px) rotate(-90deg); /* Adjust position */
+        }
+    
+        .wheel-label:nth-child(3) {
+          transform: rotate(175deg) translate(110px) rotate(-175deg); /* Adjust position */
+        }
+    
+        .wheel-label:nth-child(4) {
+          transform: rotate(260deg) translate(110px) rotate(-260deg); /* Adjust position */
+        }
+    
+        #spinnerArrow {
+          top: 25px; /* Adjust arrow position */
+        }
+      }
+    </style>
+    </head>
+    
+    <body>
+       <!-- header start -->
+       <div class="bg-white shadow-sm py-3">
+        <div class="container">
+            <div class="row align-items-center logo11">
+                <div class="col-xl-5 col-lg-3 col-md-8 "><a href="/"><img
+                            src="assets/images/logo/logo1.webp"
+                            alt="VisaPress - Create Beautiful Landing Pages Template"></a></div>
+                <div class="col-xl-4 col-lg-5 col-md-5  d-none d-xl-block">
+                    <div class="text-end">
+                        <p class="mb-0">Call now to schedule a <strong>FREE CONSULTATION</strong></p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-9 col-md-4 ">
+                    <div class="text-lg-end mt-3 mt-md-0">
+                       <a href="tel:9999467686"><h3 class="mb-0 text-primary">+91 9999-467676</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- header close -->
+    <!-- section start-->
+    <main>
+        <section class="bg-cover" style="background-image: url(assets/images/offer.webp);">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <div class="col-md-7 mt-4">
+                        <div class="text-center">
+							<img src="assets/images/offer1.webp" class="img-fluid img-responsive mobile"/>
+                            <!-- <h1 class="mb-2 mt-1 text-white">Begin your <b style="color: #f1d85f;">Australia PR</b> Application Today for only</h1>
+							<h1 class="mb-4 mt-1 text-white"><b style="color: #f1d85f;">Rs. 35,000*+GST</b></h1>
+							<p class="link-white text"> offer is valid <b style="color: #f1d85f;">31 Aug 2024</b></p> -->
+                       
+                    </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1 col-md-4">
+                        <div class="card bg-warning-200 border-0">
+                            <div class="card-body">
+                                <h3 class="mb-4">Free Counselling</h3>
+                                <form method="POST" id="banner_form" action="/testt/newmail/sendmailoffer1/">
+								  <div class="row">
+									<div class="col-12 float-left">						
+									  <div class="row gy-3">
+										<div class="col-lg-12">
+										  <input type="text" class="form-control" name="name" placeholder="Full Name" required style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+										  <input type="email" class="form-control" name="email" placeholder="Email" required style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+										  <input type="number" class="form-control" name="phone" placeholder="Phone" required style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+										  <input type="text" class="form-control" name="city" placeholder="State/City" required style="padding: 0.4rem;">
+										</div>										
+										<div class="col-lg-12">										
+										  <select name="country" class="form-control" required style="padding: 0.4rem;">
+											<option value="">Country Interested In</option>
+											<option value="Australia">Australia</option>
+											<option value="Canada">Canada</option>
+											<option value="New Zealand">New Zealand</option>
+											<option value="UK">UK</option>
+											<option value="other">Other</option>
+										  </select>
+										</div>
+										<div class="col-lg-12">										
+										  <select name="Visa" class="form-control" required style="padding: 0.4rem;">
+											<option value="">Select Visa Type</option>
+											<option value="Permanent Residency (PR)">Permanent Residency (PR)</option>
+											<option value="Study">Study</option>
+											<option value="Tourist/Visitor">Tourist/Visitor</option>
+										  </select>											
+										</div>
+										<!-- Spinner Popup Button -->
+										<div class="col-lg-12">
+										  <button type="button" class="btn btn-success" id="spinButton" onclick="openSpinnerPopup()">Spin for Offer</button>
+										  <input type="text" class="form-control mt-2" id="offerResult" name="offer" placeholder="Your Offer" readonly required>
+										 
+										</div>
+
+
+										<div class="g-recaptcha" data-sitekey="6LeQwdspAAAAADdAR7RETB-KvzgNRVrmCQYin-6y"></div>
+										<input type="text" name="honeypot" style="display:none">
+										<center><button class="btn btn-outline-primary" name="google_submit_frm_desk" type="submit" id="banner_Submit_button">Apply Now</button></center>
+									  </div>
+									</div>
+								  </div>
+								</form>
+
+								
+                                <!-- Spinner Popup -->
+                                <div id="spinnerPopup">
+                                  <div>
+                                    <h4>Spin the Wheel</h4>
+                                    <div class="wheel-container">
+                                      <!-- Spinner Wheel with percentage labels -->
+                                      <div id="spinnerWheel">
+                                        <!-- Percentage labels -->
+                                        <div class="wheel-label" style="transform: rotate(5deg) translate(180px) rotate(-5deg); top: 25%; left: 27%;">10%</div>
+                                        <div class="wheel-label" style="transform: rotate(90deg) translate(180px) rotate(-90deg); top: 28%; left: 62%;">15%</div>
+                                        <div class="wheel-label" style="transform: rotate(175deg) translate(180px) rotate(-175deg); top: 61%; left: 64%;">18%</div>
+                                        <div class="wheel-label" style="transform: rotate(260deg) translate(180px) rotate(-260deg); top: 64%; left: 35%;">25%</div>
+                                      </div>
+                                
+                                      <!-- Arrow/Mark indicating the selected percentage -->
+                                      <div id="spinnerArrow"></div>
+                                    </div>
+                                
+                                    <button class="btn btn-primary" id="spinButtonPopup" onclick="spinWheel()">Spin</button>
+                                    <p id="spinMessage"></p>
+                                    <button class="btn btn-danger mt-2" onclick="closeSpinnerPopup()" id="closeButton">Close</button>
+                                  </div>
+                                </div>
+                                
+                            	<script>
+                                    const prizes = [10, 15, 18, 25]; // Discounts
+                                    let spinning = false;
+                                    
+                                    // Initialize localStorage values if not set
+                                    if (localStorage.getItem('spinCount') === null) {
+                                      localStorage.setItem('spinCount', '0'); // Set spin count to 0 if not already set
+                                    }
+                                    if (localStorage.getItem('offer') === null) {
+                                      localStorage.setItem('offer', ''); // Set offer to empty if not already set
+                                    }
+                                    
+                                    // Check if the user already has an offer
+                                    document.addEventListener('DOMContentLoaded', () => {
+                                      const spinCount = parseInt(localStorage.getItem('spinCount'));
+                                      const storedOffer = localStorage.getItem('offer');
+                                    
+                                      if (spinCount >= 2 && storedOffer) {
+                                        // Display the saved offer if the user has already spun twice
+                                        document.getElementById('offerResult').value = storedOffer;
+                                        document.getElementById('spinButton').style.display = 'none'; // Hide spin button
+                                        document.getElementById('spinMessage').textContent = `Congrats! You got ${storedOffer}`;
+                                        document.getElementById('spinMessage').style.color = '#27ae60'; // Set message color to green
+                                      }
+                                    });
+                                    
+                                    function openSpinnerPopup() {
+                                      const spinCount = parseInt(localStorage.getItem('spinCount'));
+                                    
+                                      if (spinCount >= 2) {
+                                        alert("You have already used your 2 spins. Better luck next time!");
+                                        return; // Prevent further spins
+                                      }
+                                    
+                                      document.getElementById('spinnerPopup').style.display = 'flex';
+                                    }
+                                    
+                                    function closeSpinnerPopup() {
+                                      document.getElementById('spinnerPopup').style.display = 'none';
+                                    }
+                                    
+                                    function spinWheel() {
+                                      if (spinning) return; // Prevent multiple spins
+                                      spinning = true;
+                                    
+                                      const spinCount = parseInt(localStorage.getItem('spinCount'));
+                                    
+                                      if (spinCount >= 2) {
+                                        alert("You have already used your 2 spins. Better luck next time!");
+                                        spinning = false;
+                                        return; // Prevent further spins
+                                      }
+                                    
+                                      if (spinCount === 1) {
+                                        // Display a warning message on the second spin
+                                        const spinMessage = document.getElementById('spinMessage');
+                                        spinMessage.style.color = "orange"; // Optional: Change text color for the warning
+                                        spinMessage.textContent = "Warning: This is your second spin! Don't reload the page, or you'll lose your offer.";
+                                      }
+                                    
+                                      const spinnerWheel = document.getElementById('spinnerWheel');
+                                      const segmentAngle = 360 / prizes.length; // Angle of each segment
+                                    
+                                      // Randomly calculate a stopping angle
+                                      const randomAngle = Math.random() * 360; // Angle to land on
+                                      const extraSpins = 5100; // Add extra spins for effect (4 full rotations)
+                                      const finalAngle = extraSpins + randomAngle;
+                                    
+                                      // Start the spin
+                                      spinnerWheel.style.transition = 'transform 4s ease-out';
+                                      spinnerWheel.style.transform = `rotate(${finalAngle}deg)`;
+                                    
+                                      setTimeout(() => {
+                                        // Normalize the final angle to determine the prize
+                                        const normalizedAngle = (360 - (finalAngle % 360) + segmentAngle / 2) % 360; // Center the arrow
+                                        const segmentIndex = Math.floor(normalizedAngle / segmentAngle) % prizes.length;
+                                    
+                                        const offer = `${prizes[segmentIndex]}% off`; // Fetch the correct prize
+                                    
+                                        // Update the UI with the correct percentage
+                                        const spinMessage = document.getElementById('spinMessage');
+                                        spinMessage.style.color = "#27ae60"; // Change text color to green for success
+                                        spinMessage.textContent = `Congrats! You got ${offer}!`;
+                                    
+                                        // Update the result field
+                                        document.getElementById('offerResult').value = offer;
+                                    
+                                        // Store the offer and increment the spin count in localStorage
+                                        localStorage.setItem('offer', offer);
+                                        localStorage.setItem('spinCount', spinCount + 1);
+                                    
+                                        // Hide the "Spin for Offer" button
+                                        document.getElementById('spinButton').style.display = 'none';
+                                    
+                                        // Hide spin buttons and show close button
+                                        document.getElementById('spinButtonPopup').style.display = 'none';
+                                        document.getElementById('closeButton').style.display = 'block';
+                                    
+                                        spinning = false;
+                                      }, 4000); // Wait for spin duration
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+     
+        <!-- section start -->
+        <section class="py-lg-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center mb-5">
+                        <div class="text-center mb-2 px-xxl-6">
+                            <h2 class="mb-1">During Your Free Webinar, You'll Discover.</h2>                            
+                        </div>
+                    </div>
+                </div>
+				 <div class="row text-center">
+                    <!-- Step 1 -->
+                    <div class="col-4">
+                        <div class="webinar-section">
+                            <img src="assets/images/1.webp" alt="Benefits of PR in Australia" class="img-fluid img-responsive mobile" style="width: -webkit-fill-available; padding-bottom: 19px;"> <!-- Replace with your image URL -->
+                            <h4>Benefits of Getting Permanent Residency in Australia</h4>               
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="col-4">
+                        <div class="webinar-section">
+                            <img src="assets/images/2.webp" alt="Process to Apply for Australia PR Visa" class="img-fluid img-responsive mobile" style="width: -webkit-fill-available; padding-bottom: 19px;"> <!-- Replace with your image URL -->
+                            <h4>Step by Step Process to Apply for Australia PR Visa</h4>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="col-4">
+                        <div class="webinar-section">
+                            <img src="assets/images/3.webp" alt="Best Immigration Pathway" class="img-fluid img-responsive mobile" style="width: -webkit-fill-available; padding-bottom: 19px;"> <!-- Replace with your image URL -->
+                            <h4>How to Choose the Best Immigration Pathway for Your Profile</h4>
+                        </div>
+                    </div>
+                </div>
+		   </div>
+        </section>
+        <!-- section close -->
+		
+		<section class="py-lg-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center mb-5">
+                        <div class="text-center mb-2 px-xxl-6">
+                            <h2 class="mb-1">Why You Should Consider Applying for Australian PR?</h2>                        
+                        </div>
+                    </div>
+                </div>
+				 <div class="row">
+					  <div class="col-md-4">
+                    <img src="assets/images/5.jpg" alt="Australian PR Benefits" class="img-fluid img-responsive mobile"> <!-- Replace with your image URL -->
+                </div>
+                <!-- Content Section -->
+                <div class="col-md-8 pr-content">
+                    <ul>
+                        <li>Doubling Net Migration: Australia is targeting 2 million migrants by 2026, ensuring quicker entry and better opportunities.</li>
+                        <li>Quick Response to Crises: Australia’s swift action in handling natural disasters and pandemics sets it apart globally.</li>
+                        <li>Top Sources of Migration: Majority of permanent migrants in recent years have been from India and China.</li>
+                        <li>High-Paying Job Opportunities: Excellent career prospects with high salaries expected over the next two years.</li>
+                        <li>Secure Family Future: Free education for kids, full family medical coverage, and parent migration pathways after PR.</li>
+                        <li>Favourable Climate & No Language Barriers: Enjoy a pleasant climate and ease of communication, with English widely spoken.</li>
+                        <li>Pathway to Citizenship: A clear, fast track to becoming an Australian citizen! 🇦🇺</li>
+                    </ul>
+                </div>       
+				</div>         
+
+		   </div>
+        </section>
+        <!-- section close -->
+        
+     
+        <!-- section start -->
+        <section class="py-lg-5 py-5" style="background-color: #e1ebf7;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center mb-2">
+                            <h2 class="mb-1">Our Accreditation and Affiliates</h2>
+                        </div>
+                    </div>
+                </div>
+			<div class="row mt-3">
+				<div class="col-lg-2">			  
+					<a>
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/rcic.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+				<div class="col-lg-2">			  
+					<a>	   
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/office.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+				<div class="col-lg-2">			  
+					<a> 
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/nzami.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+				<div class="col-lg-2">			  
+					<a>   
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/mara.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+				
+				<div class="col-lg-2">			  
+					<a>		   
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/iaa.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+				<div class="col-lg-2">			  
+					<a>		   
+					<center><img src="https://apicalvisaexperts.com/assets/images/accreditation/pier.webp" alt="" class="img-fluid img-responsive mobile" style="height: 77px;">  </center></a>			   
+				</div>
+			</div>
+            </div>
+        </section>
+        <!-- section close -->
+        <!-- section start -->
+        <section class="py-lg-5 py-5 bg-gray-800 text-white text-opacity-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="text-center mb-5">
+                            <h2 class="text-white mb-1">Join Our Free Webinar</h2>
+                            <p class="mb-0">Contact us today by fill up free online visa assessment and we will contact
+                                you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                         <form method="POST" id="banner_form" action="/testt/newmail/immi-webinar/">
+							<div class="row">
+								<div class="col-12 float-left">						
+									<div class="row gy-3">
+										<div class="col-lg-12">
+											<input type="text" class="form-control" name="name" placeholder="Full Name" required="" style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+											<input type="email" class="form-control" name="email" placeholder="Email" required="" style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+											<input type="number" class="form-control" name="phone" placeholder="Phone" required="" style="padding: 0.4rem;">
+										</div>
+										<div class="col-lg-12">
+											<input type="text" class="form-control" name="city" placeholder="State/City" required="" style="padding: 0.4rem;">
+										</div>										
+										<div class="col-lg-12">										
+											<select name="country" class="form-control" required="" style="padding: 0.4rem;">
+												<option value="">Country Interested In</option>
+												<option value="Australia">Australia</option>
+												<option value="Canada">Canada</option>
+												<option value="New Zealand">New Zealand</option>
+												<option value="UK">UK</option>
+												<option value="other">Other</option>
+											</select>
+										</div>
+										<div class="col-lg-12">										
+											<select name="Visa" class="form-control" required="" style="padding: 0.4rem;">
+												<option value="">Select Visa Type</option>
+												<option value="Permanent Residency (PR)">Permanent Residency (PR)</option>
+												<option value="Study">Study</option>
+												<option value="Tourist/Visitor">Tourist/Visitor</option>
+											</select>											
+										</div>
+										<div class="g-recaptcha" data-sitekey="6LeQwdspAAAAADdAR7RETB-KvzgNRVrmCQYin-6y"></div>
+										<input type="text" name="honeypot" style="display:none">
+										<center><button class="btn btn-outline-primary" name="google_submit_frm_desk" type="submit" id="banner_Submit_button">Apply Now</button></center>
+									</div>
+								</div>
+							</div>
+						</form>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-4 border-0">
+                            <div class="card-body">
+                                <div class="text-center text-dark">
+                                    <div class="mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="tel:9999467686"><h3 class="mb-1">+91 9999-467686</h3></a>
+                                        <p class="mb-0">Mon - sat 10:00am - 6:30pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="text-center text-dark">
+                                    <div class="mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            fill="currentColor" class="bi bi-chat-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
+                                        </svg>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h3 class="mb-1">Chat with Us</h3>
+                                        <p class="mb-0">24/7/ 365 days a week</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+    </main>
+    <!-- footer -->
+    <div class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="small mb-0">Copyright © 2024 <a href="#!"> Immigration Experts</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeQwdspAAAAADdAR7RETB-KvzgNRVrmCQYin-6y"></script>
+    </body>
+    </html>

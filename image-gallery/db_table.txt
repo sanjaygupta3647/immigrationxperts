@@ -1,0 +1,38 @@
+//Create Database Tables
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `mobile` int(11) NOT NULL,
+  `address` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+  //user
+
+INSERT INTO `user` (`id`, `email`, `password`, `first_name`, `last_name`, `mobile`, `address`) VALUES
+(2, 'smith@phpzag.com', '202cb962ac59075b964b07152d234b70', 'Adam', 'Smith', 2147483647, '');
+
+//user_gallery
+
+CREATE TABLE `user_gallery` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `image_title` varchar(255) NOT NULL,
+  `image_description` varchar(255) NOT NULL,
+  `image_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `user_gallery`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;

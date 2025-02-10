@@ -1,0 +1,583 @@
+body {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	/*-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;*/
+	/* font-family: 'Open Sans', sans-serif; */
+	position:relative;
+	background: #fff;
+}
+
+
+/*START SOCIAL PROFILE CSS*/
+.social_profile {margin-top:40px;}
+.social_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0;
+}
+.social_profile ul li{float:left;}
+.social_profile ul li a {
+  text-align: center;
+  border: 0px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  margin: 0px 5px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+@media only screen and (max-width:768px) { 
+.social_profile ul li a{margin-right:10px;margin-bottom:10px;}
+}
+@media only screen and (max-width:480px) { 
+.social_profile ul li a{
+  width:40px;
+  height:40px;
+  line-height:40px;
+}
+}
+.icon-ht {
+  padding-right: 10px;
+}
+.d-flex {
+  margin-top: 30px;
+  display: flex!important;
+}
+.social_profile ul li a:hover{
+background:#fff;
+border: 1px solid #fff;
+color:#fff;
+border:0px;
+}
+
+
+@media(max-width:1000px){
+.logo {
+  display: inline-block;
+  width: 50%;
+  padding: 10px 10px 10px 0px;
+}
+.mob-menu {
+  display: inline-block;
+  width: 49%;
+}
+.mob-menu span {
+  border: solid 2px #3a76cb;
+  display: block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 6px;
+  width: 50px;
+  color: #3a76cb;
+  font-size: 25px;
+  cursor: pointer;
+} 
+.main-menu {
+  margin: 0px 0px 20px 0px;
+  float: left;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: none;
+} 
+.main-menu ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.main-menu ul.right-nav {
+  text-align: center;
+  margin-top: 6px;
+}
+ul.right-nav {
+  margin-bottom: 10px;
+}
+.main-menu {
+  margin: 0px 0px 20px 0px;
+  float: left;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: none;
+}
+.main-menu ul li {
+  display: block;
+  width: 100%;
+  margin: 0px;
+}
+.nav li:first-child {
+  margin-left: 0px;
+}
+.main-menu ul li a {
+  padding: 10px 15px;
+  display: block;
+  border-bottom: solid 1px #e2e4e6;
+  text-align: center;
+}
+.main-menu ul.right-nav li {
+  margin-left: 0px;
+  margin-right: 30px;
+  display: inline-block;
+  width: 150px;
+}
+.main-menu ul.right-nav li a {
+  font-size: 18px !important;
+}
+}
+a,
+a:active,
+a:focus,
+button,
+button:focus,
+button:active,
+.btn,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn.active.focus {
+	outline: none;
+	outline: 0;
+}
+ input::-moz-focus-inner {
+ border: 0;
+}
+  
+  @-webkit-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-moz-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-o-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+
+
+.clr{
+	clear: both;
+}
+
+
+/*======== Comman ===========*/
+.border1
+{
+	border: 1px solid #000;
+}
+
+.all_page_inner
+{
+	padding-top: 140px;
+}
+
+
+/*===== Top Haeder ==*/
+
+/*====== point_calculate_sec =====*/
+.point_calculate_sec
+{
+	padding: 50px 0;
+	background-color: #eee;
+	background-image: url(../images/pattern_bubble.png);
+}
+.bg_animation1 {
+    animation: bg-animate 35s linear infinite
+}
+
+@keyframes bg-animate {
+    from {
+        background-position: 0 100
+    }
+    to {
+        background-position:  0 100%
+    }
+}
+.point_card_repeat
+{
+	border: 1px solid #01406B;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.visa_card_row
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.visa_card_left,
+.visa_card_right
+{
+	display: flex;
+	align-items: center;
+}
+.visa_card_left
+{
+	justify-content: center;
+}
+
+.point_card_row
+{
+	display: flex;
+}
+.point_card_header
+{
+	background-color: #01406B;
+	padding: 7px 15px;
+}
+.point_heading_main
+{
+	display: flex;
+	align-items: center;
+	
+}
+
+.point_card_header .point_heading h2
+{
+	font-size: 16px;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+.point_card_header .point_card_count
+{
+	text-align: right;
+}
+.point_card_header .point_card_count h2
+{
+	font-size: 16px;
+	color: #111;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+.point_card_header .point_card_count h2 span
+{
+	background-color: #000;
+    color: #fff;
+    padding: 8px 10px;
+    display: inline-block;
+}
+.point_card_body
+{
+	padding: 20px 15px;
+}
+.radio_heading
+{
+	font-size: 16px;
+    color: #072067;
+    font-weight: 600;
+	
+}
+.visa_card_right .cus_radiobtn label
+{
+	font-weight: 400;
+	font-size: 15px;
+	color: #111 !important;
+}
+
+.cus_radiobtn [type="radio"]:checked,
+.cus_radiobtn [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.cus_radiobtn [type="radio"]:checked + label,
+.cus_radiobtn [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.cus_radiobtn [type="radio"]:checked + label:before,
+.cus_radiobtn [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.cus_radiobtn [type="radio"]:checked + label:after,
+.cus_radiobtn [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.cus_radiobtn [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.cus_radiobtn [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.avtar_row
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.avtar_box_main {
+    display: flex;
+	justify-content: center;
+}
+.avtar_box_comman
+{
+	/*border: 1px solid #ccc;*/
+	text-align: center;
+	padding: 10px 0;
+	margin-top: 15px;
+}
+.avtar_box_small
+{
+	max-width: 100px;
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid red;
+	position: relative;
+}
+.avtar_box_small .img_radio img
+{
+	width: 100%;
+}
+.p_age_tag
+{
+	margin: 0;
+}
+
+
+
+.rad.linline_radio
+{
+	font-weight: normal;
+}
+
+.rad.linline_radio:hover
+{
+	color: #12016f;
+}
+.rad:hover p
+{
+	color: #12016f;
+}
+.rad{
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.rad > input{ /* HIDE ORG RADIO & CHECKBOX */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* RADIO & CHECKBOX STYLES */
+/* DEFAULT <i> STYLE */
+.rad > i{ 
+  display: inline-block;
+  vertical-align: middle;
+  width:  16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 8px #fff;
+  border: 1px solid gray;
+  background: gray;
+}
+/* CHECKBOX OVERWRITE STYLES */
+
+.rad:hover > i{ /* HOVER <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: gray;
+}
+.rad > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: orange;
+}
+
+
+
+
+
+
+
+
+.radio_number_bg1
+{
+	background-color: #ffca8c;
+}
+.radio_number_bg2
+{
+	background-color: #ace9e2;
+}
+.radio_number_bg3
+{
+	background-color: #72ccff;
+}
+.radio_number_bg4
+{
+	background-color: #b5bce9;
+}
+.circle_number_radio
+{
+	/*background-color: #ccc;*/
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle_number_radio h3
+{
+	font-size: 42px;
+    margin: 0;
+    font-weight: 600;
+    color: #000;
+}
+
+.rad .radio_box_comman{
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+	    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+	position: relative;
+	margin-bottom: 5px;
+}
+.radio_box_comman img
+{
+	width: 100%;
+}
+.rad > .radio_box_comman > input{ /* HIDE ORG RADIO & CHECKBOX */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* RADIO & CHECKBOX STYLES */
+/* DEFAULT <i> STYLE */
+.rad > .radio_box_comman >i{ 
+  display: inline-block;
+  vertical-align: middle;
+  width:  22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 8px #fff;
+  border: 1px solid gray;
+  background: #fff;
+	    position: absolute;
+    right: -8px;
+    top: 50px;
+}
+/* CHECKBOX OVERWRITE STYLES */
+.ckb > .radio_box_comman > i {
+  width: 25px;
+  border-radius: 3px;
+}
+.rad .radio_box_comman:hover > i{ /* HOVER <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: #fff;
+}
+.rad > .radio_box_comman > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: orange;
+}
+
+.avtar_box_comman p
+{
+	font-weight: 400;
+	margin: 0;
+}
+
+
+.col_5_box
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 20%;
+}
+
+.total_count_area .form-control {
+    width: 100%;
+    background-color: #ffffff;
+    height: 45px;
+    padding-left: 20px;
+    border-radius: 5px;
+    outline: 0;
+    color: #252525;
+	font-size: 15px;
+}
+.total_count_area label
+{
+	color: #fff;
+}
+.total_count_area .totaladd {
+    background-color: #ef391c;
+    color: #ffffff;
+    border: none;
+    padding: 11px 35px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+	margin-top:20px;
+}
+.point_card_body.total_count_main {
+    background-color: #1e4386;
+}
+
+
+.totop a {
+    display: none;
+	
+}
+.footer_top_angle
+{
+	font-size: 30px;
+    background: #191818;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 0;
+}
+.bg-error{ background:#ffcccc !important;}

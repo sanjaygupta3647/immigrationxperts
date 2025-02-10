@@ -1,0 +1,41 @@
+Input data: Array
+(
+    [job_id] => <br />
+<b>Deprecated</b>:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in <b>/home/immigrationxpert/public_html/image-gallery/canada_job_index.php</b> on line <b>94</b><br />
+
+    [noc_code] => 0123456
+    [job_title] => hjjhhjh
+    [broad_occupation_category] => 1 - Business, finance, and administration occupations.
+    [teer] => 
+    [major_group] => 
+    [sub_major_group] => 
+    [minor_group] => 
+    [demand_info] => 
+    [example_titles] => 
+    [main_duties] => 
+    [employment_requirements] => 
+    [salary_prospects] => 
+    [job_openings] => 
+    [code_version] => 1
+)
+SQL query: UPDATE jobs SET noc_code = ?, job_title = ?, broad_occupation_category = ?, teer = ?, major_group = ?, sub_major_group = ?, minor_group = ?, demand_info = ?, salary_prospects = ?, example_titles = ?, main_duties = ?, employment_requirements = ?, job_openings = ?, code_version = ? WHERE id = ?Input data: Array
+(
+    [job_id] => <br />
+<b>Deprecated</b>:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in <b>/home/immigrationxpert/public_html/image-gallery/canada_job_index.php</b> on line <b>94</b><br />
+
+    [noc_code] => 0123456
+    [job_title] => Financial Managers
+    [broad_occupation_category] => 
+    [teer] => 
+    [major_group] => 
+    [sub_major_group] => 
+    [minor_group] => 
+    [demand_info] => 
+    [example_titles] => 
+    [main_duties] => 
+    [employment_requirements] => 
+    [salary_prospects] => 
+    [job_openings] => 
+    [code_version] => 1
+)
+SQL query: UPDATE jobs SET noc_code = ?, job_title = ?, broad_occupation_category = ?, teer = ?, major_group = ?, sub_major_group = ?, minor_group = ?, demand_info = ?, salary_prospects = ?, example_titles = ?, main_duties = ?, employment_requirements = ?, job_openings = ?, code_version = ? WHERE id = ?

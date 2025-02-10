@@ -1,0 +1,149 @@
+
+
+.navbar-fixed-top {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+	padding:20px 0 0 0;
+	background: #fff;
+	background: rgba(255,255,255,0.95)
+}
+.navbar-fixed-top ul {
+	max-width: 1170px;
+	border-top: none !important;
+	float: none;
+	margin: 0 auto
+}
+.navbar-fixed-top .navbar-nav > li > a {
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+
+
+
+.topbar-nav {
+	margin: 3px 0px
+}
+.topbar-nav > li > a {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	padding: 0px 10px;
+
+}
+.navbar-default .topbar-nav > .active > a {
+	color: #cc0000 !important;
+	font-weight: bold
+}
+.navbar-default .topbar-nav > li > a:hover {
+
+}
+@media (min-width:768px) {
+.topbar-nav {
+	margin: 0
+}
+}
+
+
+
+@-webkit-keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+transform:translateY(0)
+}
+}
+@keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+-ms-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+-ms-transform:translateY(0);
+transform:translateY(0)
+}
+}
+@-webkit-keyframes toRightFromLeft {
+49% {
+-webkit-transform:translate(100%)
+}
+50% {
+opacity:0;
+-webkit-transform:translate(-100%)
+}
+51% {
+opacity:1
+}
+}
+@-moz-keyframes toRightFromLeft {
+49% {
+-moz-transform:translate(100%)
+}
+50% {
+opacity:0;
+-moz-transform:translate(-100%)
+}
+51% {
+opacity:1
+}
+}
+@keyframes toRightFromLeft {
+49% {
+transform:translate(100%)
+}
+50% {
+opacity:0;
+transform:translate(-100%)
+}
+51% {
+opacity:1
+}
+}
+@-webkit-keyframes toBottomFromTop {
+49% {
+-webkit-transform:translateY(100%)
+}
+50% {
+opacity:0;
+-webkit-transform:translateY(-100%)
+}
+51% {
+opacity:1
+}
+}
+@-moz-keyframes toBottomFromTop {
+49% {
+-moz-transform:translateY(100%)
+}
+50% {
+opacity:0;
+-moz-transform:translateY(-100%)
+}
+51% {
+opacity:1
+}
+}
+@keyframes toBottomFromTop {
+49% {
+transform:translateY(100%)
+}
+50% {
+opacity:0;
+transform:translateY(-100%)
+}
+51% {
+opacity:1
+}
+}

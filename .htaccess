@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteBase /
+
+# Disable Directory Listing
+Options -Indexes
+
+# Redirect non-www to www and HTTP to HTTPS
+#RewriteCond %{HTTP_HOST} ^immigrationxperts\.com [NC,OR]
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ http://local.immigrationxperts.com/$1 [L,R=301]
+
+# Redirect URLs without a trailing slash to URLs with a trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ http://local.immigrationxperts.com/$1/ [L,R=301]
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)/$ /$1.php [L]
+
+# Redirect /testimonial/ to /testimonials/
+RewriteRule ^testimonial/?$ http://local.immigrationxperts.com/testimonials/ [L,R=301]
+
+# Redirect root directory hits to 404
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /$ [NC]
+RewriteRule ^.*$ /404.php [L,R=404]
+
+# Custom 404 Page Error
+ErrorDocument 404 /404.php 
+
+# Rule for handling URLs like /australia-immigration.php/slug
+RewriteRule ^australia-immigration.php/([a-zA-Z0-9_-]+)/?$ /australia-immigration.php?slug=$1 [L,QSA]
+
+ 
