@@ -19,11 +19,11 @@ $database = new Database();
 // Get the database connection
 $db = $database->getConnection();
 // Check if the connection is successful
-if (!$db) {
-    die("Connection failed: " . $database->getError());
-}
+if (!$db) {
+    die("Connection failed: " . $database->getError());
+}if(!empty($_GET['id'])){	$sql_get_details = "SELECT * FROM user_gallery where id = ".$_GET['id'];	$data = $db->query($sql_get_details);	$res = $data->fetch_assoc(); }
 
-$gallery = new Gallery($db);
+//$gallery = new Gallery($db);
 
 // Check for form submission
 if (isset($_POST["upload"]) && $_SESSION["userid"]) {
@@ -31,17 +31,8 @@ if (isset($_POST["upload"]) && $_SESSION["userid"]) {
     $user_id = $_POST["user_id"];
     $occupation = $_POST["occupation"];
     $details = $_POST["details"];
-    $category = $_POST["category"];
-    
-    // Generate a unique filename by appending a timestamp to the original filename
-    $image_name = time() . '_' . $_FILES["uploaded_file"]["name"];
-
-    // Move the uploaded file to the uploads directory with the unique filename
-    move_uploaded_file($_FILES["uploaded_file"]["tmp_name"], "uploads/" . $image_name);
-
-    $q = "INSERT INTO user_gallery (user_id, name, details, image, category, occupation) 
-          VALUES ('$user_id', '$name', '$details', '$image_name', '$category', '$occupation')";
-
+    $category = $_POST["category"];	$_POST['approval_date'] = $_POST['approval_date'] ? strtotime($_POST['approval_date']) :time(); 	$approval_date = date("Y-m-d H:i:s", $_POST['approval_date']);
+        if ($_FILES["uploaded_file"]["name"]) {		// Generate a unique filename by appending a timestamp to the original filename		$image_name = time() . '_' . $_FILES["uploaded_file"]["name"];		// Move the uploaded file to the uploads directory with the unique filename		move_uploaded_file($_FILES["uploaded_file"]["tmp_name"], "uploads/" . $image_name);		// If an ID is provided, update the existing record		if (isset($_POST['id']) && !empty($_POST['id'])) {			$id = $_POST['id'];			$q = "UPDATE user_gallery 				  SET user_id = '$user_id', 					  name = '$name', 					  details = '$details', 					  image = '$image_name', 					  category = '$category', 					  approval_date = '$approval_date', 					  occupation = '$occupation' 				  WHERE id = '$id'";		} else {			// If no ID is provided, insert a new record			$q = "INSERT INTO user_gallery (user_id, name, details, image, category, occupation,approval_date) 				  VALUES ('$user_id', '$name', '$details', '$image_name', '$category', '$occupation','$approval_date')";		}	} else {		// If no file is uploaded, handle the update or insert without the image field		if (isset($_POST['id']) && !empty($_POST['id'])) {			$id = $_POST['id'];			$q = "UPDATE user_gallery 				  SET user_id = '$user_id', 					  name = '$name', 					  details = '$details', 					  category = '$category', 					  approval_date = '$approval_date', 					  occupation = '$occupation' 				  WHERE id = '$id'";		} else {			$q = "INSERT INTO user_gallery (user_id, name, details, category, occupation,approval_date) 				  VALUES ('$user_id', '$name', '$details', '$category', '$occupation','$approval_date')";		}	} 
     $qry = $db->query($q);
 
     if ($qry === TRUE) {
@@ -78,33 +69,33 @@ if (isset($_POST["upload"]) && $_SESSION["userid"]) {
         <fieldset>                            
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" require placeholder="Name" class="form-control" />
+                <input type="text" name="name" id="name" value="<?php echo $res['name'] ?? ''; ?>" require placeholder="Name" class="form-control" />
             </div>    
-            <input type="hidden" name="user_id" id="user_id" placeholder="user_id" class="form-control" value="<?php echo $_SESSION['userid']; ?>" readonly />
+            <input type="hidden" name="user_id" id="user_id" placeholder="user_id" class="form-control" value="<?php echo $_SESSION['userid']; ?>" readonly />						 <input type="hidden" name="id" value="<?php echo $res['id'] ?? ''; ?>"  />
 
             <div class="form-group">
-                <label for="occupation">Select Occupation:</label>
-                <select id="occupationSelect" name="occupation" class="form-control">
-                    <!-- Options will be dynamically added here -->
+                <label for="occupation">Select Occupation:</label>				<?php				$sql_select = "SELECT * FROM occupations ORDER BY occupation_name ASC"; 				$result_select = $db->query($sql_select);				?>
+                <select id="occupationSelect__" name="occupation" class="form-control">					<?php					while ($row = $result_select->fetch_assoc()) {						?>						<option value="<?php echo $row['id']; ?>" <?php echo ((!empty($res['occupation'])) && $row['id']==$res['occupation']) ?'selected':'' ?> ><?php echo $row['ANZSCO']; ?> - <?php echo $row['occupation_name']; ?></option>						<?php					}
+                    ?>
                 </select>
-            </div>    
+            </div>			<div class="form-group">                <label for="details">Approval Date(M/D/Y):</label>                <input 					type="datetime-local" 					name="approval_date" 					value="<?php echo isset($res['approval_date']) ? date('Y-m-d\TH:i', strtotime($res['approval_date'])) : ''; ?>" 					placeholder="Approval Date" 					class="form-control" 				/>            </div>			
             <div class="form-group">
                 <label for="details">Details:</label>
-                <input type="text" name="details" id="details" placeholder="Details" class="form-control" />
+                <input type="text" name="details" id="details" value="<?php echo $res['details'] ?? ''; ?>" placeholder="Details" class="form-control" />
             </div>    
             
             <div class="form-group">
                 <label for="name">Category:</label>
                 <select name="category" id="category" class="form-control">
-                    <option value="ACS_LATEST">ACS_LATEST</option>
-                    <option value="ENGINEERS_AUSTRALIA">ENGINEERS_AUSTRALIA</option>
-					<option value="INVITES_PNP_CANADA_AUSTRALIA">INVITES PNP-CANADA / AUSTRALIA</option>
-                    <option value="LATEST_CPA_ICAA">LATEST CPA ICAA</option>
-                    <option value="NAATI">NAATI</option>
-                    <option value="PTE_IELTS">PTE IELTS</option>
-                    <option value="VETASSESS_LATEST">VETASSESS LATEST</option>
-                    <option value="VISA_GRANTS">VISA GRANTS</option>
-                    <option value="IML">IML</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="ACS_LATEST") ?'selected':'' ?> value="ACS_LATEST">ACS_LATEST</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="ENGINEERS_AUSTRALIA") ?'selected':'' ?> value="ENGINEERS_AUSTRALIA">ENGINEERS_AUSTRALIA</option>
+					<option <?php echo ((!empty($res['category'])) && $res['category']=="INVITES_PNP_CANADA_AUSTRALIA") ?'selected':'' ?> value="INVITES_PNP_CANADA_AUSTRALIA">INVITES PNP-CANADA / AUSTRALIA</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="LATEST_CPA_ICAA") ?'selected':'' ?> value="LATEST_CPA_ICAA">LATEST CPA ICAA</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="NAATI") ?'selected':'' ?> value="NAATI">NAATI</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="PTE_IELTS") ?'selected':'' ?> value="PTE_IELTS">PTE IELTS</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="VETASSESS_LATEST") ?'selected':'' ?> value="VETASSESS_LATEST">VETASSESS LATEST</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="VISA_GRANTS") ?'selected':'' ?> value="VISA_GRANTS">VISA GRANTS</option>
+                    <option <?php echo ((!empty($res['category'])) && $res['category']=="IML") ?'selected':'' ?> value="IML">IML</option>
                     
                     <!-- Add other categories as needed -->
                 </select>
@@ -123,34 +114,4 @@ if (isset($_POST["upload"]) && $_SESSION["userid"]) {
 </div>
 
 <?php include('include/footer.php');?>
-<script>
-// AJAX request to fetch occupations
-$.ajax({
-    url: 'get_occupations.php',
-    type: 'GET',
-    dataType: 'json',
-    success: function(data) {
-        $('#occupationSelect').empty(); // Clear existing options
-        if (Array.isArray(data) && data.length > 0) {
-            $.each(data, function(index, occupation) {
-                // Create a new option element
-                var option = $('<option>');
-
-                // Set the value as the occupation ID and text as occupation name
-                option.val(occupation.id); // Store ID as value
-                option.text(occupation.ANZSCO + ' - ' + occupation.occupation_name); // Combine occupation name and 
-
-                // Append the option to the select element
-                $('#occupationSelect').append(option);
-            });
-        } else {
-            console.log('No occupations data found.');
-        }
-    },
-    error: function(xhr, status, error) {
-        console.error('Error fetching occupations:', error);
-    }
-});
-
-
-</script>
+ 

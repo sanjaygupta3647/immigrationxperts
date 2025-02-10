@@ -86,7 +86,7 @@ include 'metadata.php';
     <link rel="stylesheet" href="/assets/css/default-skin.css">
     
     <style>
-        
+        .portfolio__single {    position: relative;    overflow: hidden; /* Ensures the border doesn't overflow */    border-radius: 15px; /* Rounded corners for a fancy look */    border: 4px solid transparent; /* Initial transparent border */    /*background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #fbc2eb);  Gradient background for the border */    background-clip: padding-box; /* Ensures the background doesn't cover the content */    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */    transition: all 0.3s ease; /* Smooth transition for hover effects */}
         
         @media (max-width: 768px) {
             .pswp__button--close {
@@ -514,7 +514,7 @@ include 'metadata.php';
                                       FROM user_gallery ug
                                       LEFT JOIN occupations o ON ug.occupation = o.id
                                       $categoryFilter
-                                      ORDER BY ug.time_stamp DESC
+                                      ORDER BY ug.approval_date DESC
                                       LIMIT " . ($page - 1) * $itemsPerPage . ", $itemsPerPage";
                     
                                 $qry = $db->query($q);
