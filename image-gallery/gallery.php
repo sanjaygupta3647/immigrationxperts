@@ -210,13 +210,10 @@ $offset = ($page - 1) * $itemsPerPage;
 
                 $sql = "SELECT ug.id, ug.user_id, ug.name, ug.details, ug.image, ug.category, ug.approval_date,
 
-                               o.occupation_name, o.ANZSCO
-
-                        FROM user_gallery ug
-
-                        INNER JOIN occupations o ON ug.occupation = o.id
-
-                        ORDER BY ug.id DESC";
+                               o.occupation_name, o.ANZSCO 
+                        FROM user_gallery ug 
+                        INNER JOIN occupations o ON ug.occupation = o.id 
+                        ORDER BY ug.approval_date DESC";
 
 
 
@@ -243,14 +240,14 @@ $offset = ($page - 1) * $itemsPerPage;
                         echo "<td>{$row['category']}</td>";
 
                         echo "<td>{$row['ANZSCO']} - {$row['occupation_name']}</td>";
-						$d = date('Y-m-d H:i:A', strtotime($row['approval_date']));
+						$d = date('Y-m-d h:i:A', strtotime($row['approval_date']));
                         echo "<td>$d</td>";
 
                           
 
 
                         echo "<td>
-                        <a href='upload.php?id={$row['id']}' class='btn btn-warning'>Update</a> &nbsp;
+                        <a href='upload.php?id={$row['id']}' class='btn btn-warning'>Edit</a> &nbsp;
                         <a href='delete_image.php?id={$row['id']}' class='btn btn-danger'>Delete</a></td>";
 
                         echo "</tr>";

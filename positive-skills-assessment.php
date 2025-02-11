@@ -416,7 +416,7 @@ include 'metadata.php';
 								  FROM user_gallery ug
 								  LEFT JOIN occupations o ON ug.occupation = o.id
 								  WHERE (LOWER(o.occupation_name) LIKE LOWER('%$name%') AND LOWER(o.ANZSCO) LIKE LOWER('%$code%'))
-								  ORDER BY ug.time_stamp DESC";
+								  ORDER BY ug.approval_date DESC";
 
 							// Execute the query
 							$qry = $db->query($q);
@@ -517,44 +517,9 @@ include 'metadata.php';
                                       ORDER BY ug.approval_date DESC
                                       LIMIT " . ($page - 1) * $itemsPerPage . ", $itemsPerPage";
                     
-                                $qry = $db->query($q);
-                    
+                                $qry = $db->query($q); 								
                                 // Display items
-                                while ($rs = $qry->fetch_array()) {
-                                    $cat = $rs['category'];
-                                    $title = $rs['name'];
-                                    $im = $rs['image'];
-                                    $occ = $rs['occupation_name'];
-                                    $anzsco = $rs['ANZSCO'];
-                                    $cl = getCategoryClass($cat);
-                    
-                                    // Output each portfolio item in the desired format
-                                    echo '<div class="col-xl-3 col-lg-6 col-md-6 filter-item gallery-item">';
-                                    echo '    <div class="portfolio__single">';
-                                    echo '        <div class="portfolio__img">';
-                                    echo '            <a href="/image-gallery/uploads/' . $im . '" data-size="600x768">';
-                                    echo '                <img src="/image-gallery/uploads/' . $im . '" alt="' . htmlspecialchars($title) . '">';
-                                    echo '            </a>';
-                                    echo '            <div>';
-                                    echo '                <a href="/image-gallery/uploads/' . $im . '" class="img-popup"></a>';
-                                    echo '            </div>';
-                                    echo '            <div class="portfolio__content">';
-                                    echo '                <p class="portfolio__sub-title">';
-                                    if (!empty($anzsco)) {
-                                        echo htmlspecialchars($anzsco) . ' - ';
-                                    }
-                                    if ($occ !== null) {
-                                        echo htmlspecialchars(str_replace("_", " ", $occ));
-                                    }
-                                    echo '                </p>';
-                                    echo '                <h4 class="portfolio__title"><a href="/#">' . htmlspecialchars($title) . '</a></h4>';
-                                    echo '            </div>';
-                                    echo '        </div>';
-                                    echo '    </div>';
-                                    echo '</div>';
-                                }
-                                ?>
-                    
+					            while ($rs = $qry->fetch_array()){ 								 								$cat = $rs['category'];								$title = htmlspecialchars($rs['name']);								$im = $rs['image'];								$occ = $rs['occupation_name'];								$anzsco = $rs['ANZSCO'];								$cl = getCategoryClass($cat);								// Prepare the ANZSCO and occupation text								$subTitle = '';								if (!empty($anzsco)) {									$subTitle .= htmlspecialchars($anzsco) . ' - ';								}								if ($occ !== null) {									$subTitle .= htmlspecialchars(str_replace("_", " ", $occ));								}								?>								<div class="col-xl-3 col-lg-6 col-md-6 filter-item gallery-item">									<div class="portfolio__single">										<div class="portfolio__img">											<a href="/image-gallery/uploads/<?php echo $im; ?>" data-size="600x768">												<img src="/image-gallery/uploads/<?php echo $im; ?>" alt="<?php echo $title; ?>">											</a>											<div>												<a href="/image-gallery/uploads/<?php echo $im; ?>" class="img-popup"></a>											</div>											<div class="portfolio__content">												<p class="portfolio__sub-title"><?php echo $subTitle; ?></p>												<h4 class="portfolio__title"><a href="/#"><?php echo $title; ?></a></h4>											</div>										</div>									</div>								</div>								<?php } ?> 
                                 
                             </div>
                            
