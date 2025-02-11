@@ -105,7 +105,7 @@ if (isset($_POST["upload"]) && $_SESSION["userid"]) {
                 <input type="file" name="uploaded_file" placeholder="Choose file" accept=".jpg, .jpeg, .png" class="form-control" />
             </div>    
             <div class="form-group">
-                <input type="submit" name="upload" value="upload" class="btn btn-primary" />
+                <input type="submit" name="upload" value="<?php echo (empty($res['id'])) ? 'Upload':'Update'; ?>" class="btn btn-primary" />
             </div>
         </fieldset>
     </form>
