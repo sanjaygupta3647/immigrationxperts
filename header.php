@@ -433,9 +433,9 @@
     <div>
         <!-- <a href="/canada-immigration/67-canada-immigration-point-system/" class="transition">Canada 67 Points Calculator</a> 
         <a href="/canada-immigration/canada-comprehensive-ranking-crs-points-calculator/" class="transition">Canadian CRS Calculator for Skilled Immigration</a>
-        <a href="/australia-pr-points-calculator/">Australia PR Points Calculator for Skilled Migration Visa</a>
+        
 		<!-- <a href="https://immigratioexperts.searchmyanzsco.com.au/" target="_blank">Search My Anzsco </a>
-		<a href="/canada-immigration/noc-code-canada/">Find Your NOC Code</a> -->
+		<a href="/canada-immigration/noc-code-canada/">Find Your NOC Code</a> -->		<a href="/australia-pr-points-calculator/">Australia PR Points Calculator for Skilled Migration Visa</a>
 		<a href="/australia-immigration/skilled-occupation-list/">Find Your Australia Skilled Occupation List</a>
     </div>
     <a href="javascript:void(0)" class="tab"><img src="/assets/images/icon/calculator.png" alt=""></a>
